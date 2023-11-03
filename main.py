@@ -35,5 +35,17 @@ while game_on:
         scoreboard.increase_scores()
         food.refresh()
 
+    # detect collision with wall
+    if snake.segments[0].xcor() > 420 or snake.segments[0].xcor() < -420 or snake.segments[0].ycor() > 420 or snake.segments[0].ycor() < -420:
+        game_on = False
+        scoreboard.game_over()
+
+    # detect colission with own tail
+    # lenght_of_snake = len(snake.segments)
+    # for i in range(lenght_of_snake):
+    #     if snake.segments[0].distance(snake.segments[i]) < 15:
+    #         game_on = False
+    #         scoreboard.game_over()
+
 
 screen.exitonclick()
