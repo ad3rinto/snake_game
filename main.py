@@ -41,7 +41,7 @@ while game_on:
         game_on = False
         scoreboard.game_over()
 
-    # detect colission with own tail
+    # detect collision with own tail
     lenght_of_snake = len(snake.segments)
     for i in range(lenght_of_snake):
         if i == 0:
