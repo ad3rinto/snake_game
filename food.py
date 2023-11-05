@@ -8,7 +8,7 @@ class Food(Turtle):
         self.shape("turtle")
         self.penup()
         self.shapesize(stretch_len=0.7, stretch_wid=0.7)
-        self.color('red')
+        self.color('purple')
         self.speed('fastest')
         random_x = random.randint(-400, 400)
         random_y = random.randint(-400, 400)
