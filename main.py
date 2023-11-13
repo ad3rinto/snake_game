@@ -4,14 +4,16 @@ from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
 
-file = open("my_file.txt","r" )
-content = file.read()
-print(content)
+
+
+# with open("my_file.txt",mode="a" ) as file:
+#     file.write("MY NEW NAME IS CAPTAIN Brazillia")
+
 
 screen = Screen()
 screen.listen()
 
-screen.setup(width=900, height=900)
+screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
