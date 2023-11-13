@@ -4,6 +4,9 @@ from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
 
+file = open("my_file.txt","r" )
+content = file.read()
+print(content)
 
 screen = Screen()
 screen.listen()
@@ -39,7 +42,7 @@ while game_on:
     # detect collision with wall
     if snake.segments[0].xcor() > 420 or snake.segments[0].xcor() < -420 or snake.segments[0].ycor() > 420 or snake.segments[0].ycor() < -420:
         game_on = False
-        scoreboard.game_over()
+        scoreboard.reset_game()
 
     # detect collision with own tail
     lenght_of_snake = len(snake.segments)
